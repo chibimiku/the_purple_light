@@ -15,12 +15,12 @@ $index_data = array(
 	),
 	array(
 		'pic_1' => array('size' => 1, 'url' => 'static/testimage/index_1pic.png'),
-		'大型活动' => array(),
+		'大型活动' => array('2016十一劳模团', '2016五一劳模团', '冰球画册照片', '关爱留守儿童', '国际部一带一路考察照片', '总社成立30周年座谈会'),
 		'pic_2' => array('size' => 1, 'url' => 'static/testimage/index_1pic.png'),
-		'展示工程' => array(),
+		'展示工程' => array('展示工程'),
 	),
 	array(
-		'论坛会议' => array(),
+		'论坛会议' => array('论坛会议'),
 		'pic_big' => array('size' => 2 , 'url' => 'static/testimage/index_2pic.png'),
 		'媒体发布' => array(),
 	),
