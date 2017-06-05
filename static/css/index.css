@@ -1,9 +1,9 @@
-body {background:rgb(226,227,222);}
+body {background:rgb(227,227,224);}
 #header {width:1200px;margin:0 auto}
 #wrap {width:1200px;margin:0 auto}
-.smallblock {background:rgb(114,76,63);width:140px;height:140px;}
-.smallblock_text {font-size:20px;line-height:22px;float:right;color:#FFF}
-.smallblock_tip {background:#6A3907;width:110px;height:180px;position:absolute}
+.smallblock {background:rgb(143,76,62);width:140px;height:140px;}
+.smallblock_text {font-size:20px;line-height:22px;float:right;color:#FFF;margin: 7px;}
+.smallblock_tip {background:rgb(107,53,42);width:110px;height:180px;position:absolute}
 
 .content_img {max-width:660px;}
 
