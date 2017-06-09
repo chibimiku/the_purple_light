@@ -4,6 +4,13 @@ if(!defined('IN_PURPLE_LIGHT')){
 	exit('Access denied');
 }
 
+
+//load library
+require ('lib/meekrodb.2.3.class.php');
+
+//load config
+require ('conf/config.inc.php');
+
 ?>
 
 <!DOCTYPE html>
