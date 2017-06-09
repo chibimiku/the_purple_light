@@ -30,9 +30,8 @@ function showmessage($msg){
 <div id="header">
 	<a href="/"><img src="static/image/logo.png" title="返回首页" /></a>
 	<span id="nav">
-		<a href=""><img src="" /></a>
-		<a href=""><img src="" /></a>
-		<a href=""><img src="" /></a>
-		<a href=""><img src="" /></a>
+		<a href="/index.php"><img src="static/image/nav/home.png" /></a>
+		<a href=""><img src="static/image/nav/logo.png" /></a>
+		<a href=""><img src="static/image/nav/mail.png" /></a>
 	</span>
 </div>
