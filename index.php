@@ -32,14 +32,16 @@ function make_index_arr($arr, $subdata = array()){
 	$ret_td_arr = array();
 	foreach($arr as $row){
 		if($row['dirname'] !== 'null'){
-			$addstr = '<div class="smallblock"><a class=\"smallblock_text">'.$row['chnname'].'</a><div class="dropdown-content">';
+			$addstr = '<td><div class="smallblock"><a class=\"smallblock_text">'.$row['chnname'].'</a><div class="dropdown-content">';
 			if(!empty($subdata[$arr['id']])){
 				foreach($subdata[$arr['id']] as $in_row){
 					$addstr = $addstr."<p><a href=\"content.php?dataid=$in_row[dataid]\">$in_row[chnname]</a></p>";
 				}
 			}
-			$addstr = $addstr.'</div></div>'; //收尾
+			$addstr = $addstr.'</div></div></td>'; //收尾
 			$ret_td_arr[] = $addstr;
+		}else{
+			$ret_td_arr[] = '<td colspan="'.$row['picsize'].'"><img src="'.$row['picurl'].'" /></td>';
 		}
 	}
 
@@ -49,8 +51,7 @@ function make_index_arr($arr, $subdata = array()){
 function draw_tr($arr, $trclass = '', $tdclass = ''){
 	$returnstr = '<tr class="'.$tdclass.'">';
 	foreach($arr as $value){
-		$returnstr = $returnstr.'<td class="'.$tdclass.'">';
-		$returnstr = $returnstr.'</td>';
+		$returnstr = $returnstr.$value;
 	}
 	$returnstr = $returnstr.'</tr>';
 	return $returnstr;

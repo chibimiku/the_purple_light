@@ -20,10 +20,23 @@ define('IMGDIR', 'static/image/contents/');
 $cata = '博览会';
 $title = '创新创业博览会';
 
+//读取数据
+$dataid = intval($_GET['dataid']);
+if(!$dataid){
+	showmessage("错误的dataid");
+}
+
+$info = DB::queryFirstRow('SELECT * FROM index_catalist WHERE dataid=$dataid');
+if(!$info){
+	showmessage("错误，不正确的id");
+}
+
+$masterinfo = DB::queryFirstRow('SELECT * FROM index_list WHERE id=$dataid[indexid]');
+
 //load data from dir. 
-$title = proc_input($_GET['title']);
-$subtitle = proc_input($_GET['subtitle']);
-$datadir = dirname(__FILE__).'/static/image/contents/'.$title.'/'.$subtitle.'/'; 
+$title = $masterinfo['chnname'];
+$subtitle = $info['chnname'];
+$datadir = dirname(__FILE__).'/static/image/contents/'.$masterinfo['dirname'].'/'.$info['dirname'].'/'; 
 
 ?>
 <!--crumb-->
@@ -33,7 +46,7 @@ $datadir = dirname(__FILE__).'/static/image/contents/'.$title.'/'.$subtitle.'/';
 $files = list_file_sp($datadir, '',true);
 $imgarr = array();
 foreach($files as $key => $value){
-	$imgarr[$key] = IMGDIR.urlencode($title).'/'.urlencode($subtitle).'/'.$value;
+	$imgarr[$key] = IMGDIR.$masterinfo['dirname'].'/'.$info['dirname'].'/'.$value;
 }
 //var_dump($imgarr);
 foreach($imgarr as $imgname => $imgurl){

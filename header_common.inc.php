@@ -11,6 +11,11 @@ require ('lib/meekrodb.2.3.class.php');
 //load config
 require ('conf/config.inc.php');
 
+function showmessage($msg){
+	//粗略的处理错误信息，yeah。
+	exit($msg);
+}
+
 ?>
 
 <!DOCTYPE html>
