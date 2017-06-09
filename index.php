@@ -1,7 +1,13 @@
 <?php 
 
-
 define('IN_PURPLE_LIGHT', true);
+
+//load library
+require ('lib/meekrodb.2.3.class.php');
+
+//load config
+require ('conf/config.inc.php');
+
 require ('header_common.inc.php');
 require ('index_data.inc.php');
 ?>
