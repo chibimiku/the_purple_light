@@ -32,3 +32,11 @@ body {background:rgb(227,227,224);}
     text-decoration: none;
     display: block;
 }
+
+#staff_above {height:100px;width:100%}
+.staff {}
+.staff img {float:left;width:160px;}
+.staff .intro {float:right;padding:20px;width:70%;}
+.staff .intro .nm {font-weight:700; padding-right:60px}
+.clear {clear:both;height: 30px;}
+

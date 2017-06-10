@@ -24,7 +24,7 @@ $debug = false;
 
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="static/css/index.css?version=1.1" />
+<link rel="stylesheet" type="text/css" href="static/css/index.css?version=1.2" />
 <script type="text/javascript" src="static/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="static/js/jquery.lazyload.min.js"></script>
 </head>
@@ -32,8 +32,8 @@ $debug = false;
 <div id="header">
 	<a href="/"><img src="static/image/logo.png" title="返回首页" /></a>
 	<span id="nav">
-		<a href="/index.php"><img src="static/image/nav/home.png" /></a>
-		<a href=""><img src="static/image/nav/logo.png" /></a>
-		<a href=""><img src="static/image/nav/mail.png" /></a>
+		<a href="/index.php" title="首页"><img src="static/image/nav/home.png" /></a>
+		<a href="/about.php" title="公司简介"><img src="static/image/nav/logo.png" /></a>
+		<a href="/staff.php" title="联系我们"><img src="static/image/nav/mail.png" /></a>
 	</span>
 </div>
