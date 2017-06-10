@@ -27,6 +27,7 @@ $debug = false;
 <link rel="stylesheet" type="text/css" href="static/css/index.css?version=1.2" />
 <script type="text/javascript" src="static/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="static/js/jquery.lazyload.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
 <div id="header">
