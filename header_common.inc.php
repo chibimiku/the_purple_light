@@ -17,6 +17,22 @@ function showmessage($msg){
 }
 
 $debug = false;
+
+//首页的导航图标选中状态
+$mypic = array(
+	'home.png',
+	'logo.png',
+	'mail.png'
+);
+
+if(defined('INTRO')){
+	$mypic[1] = 'logo_disabled.png';
+}elseif(defined('STAFF')){
+	$mypic[2] = 'mail_disabled.png';
+}elseif(defined('INDEX')){
+	$mypic[0] = 'home_disabled.png';
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +49,8 @@ $debug = false;
 <div id="header">
 	<a href="/"><img src="static/image/logo.png" title="返回首页" /></a>
 	<span id="nav">
-		<a href="/index.php" title="首页"><img src="static/image/nav/home.png" /></a>
-		<a href="/about.php" title="公司简介"><img src="static/image/nav/logo.png" /></a>
-		<a href="/staff.php" title="联系我们"><img src="static/image/nav/mail.png" /></a>
+		<a href="/index.php" title="首页"><img src="static/image/nav/<?php echo $mypic[0];?>" /></a>
+		<a href="/about.php" title="公司简介"><img src="static/image/nav/<?php echo $mypic[1];?>" /></a>
+		<a href="/staff.php" title="联系我们"><img src="static/image/nav/<?php echo $mypic[2];?>" /></a>
 	</span>
 </div>

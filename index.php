@@ -1,6 +1,7 @@
 <?php 
 
 define('IN_PURPLE_LIGHT', true);
+define('INDEX', true);
 
 require ('header_common.inc.php');
 require ('index_data.inc.php');

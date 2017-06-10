@@ -1,6 +1,7 @@
 <?php 
 
 define('IN_PURPLE_LIGHT', true);
+define('INTRO', true);
 require ('header_common.inc.php');
 
 

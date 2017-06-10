@@ -1,6 +1,7 @@
 <?php 
 
 define('IN_PURPLE_LIGHT', true);
+define('STAFF', true);
 require ('header_common.inc.php');
 
 //load data from dd
