@@ -16,6 +16,7 @@ function showmessage($msg){
 	exit($msg);
 }
 
+$debug = false;
 ?>
 
 <!DOCTYPE html>
