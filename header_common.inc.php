@@ -24,8 +24,9 @@ $debug = false;
 
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+<link rel="stylesheet" type="text/css" href="static/css/index.css?version=1.1" />
 <script type="text/javascript" src="static/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.lazyload.min.js"></script>
 </head>
 <body>
 <div id="header">

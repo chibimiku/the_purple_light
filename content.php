@@ -50,7 +50,7 @@ foreach($files as $key => $value){
 }
 //var_dump($imgarr);
 foreach($imgarr as $imgname => $imgurl){
-	echo '<img class="content_img" src="'.$imgurl.'" title="'.$imgname.'" /><br />';
+	echo '<img class="content_img lazy" data-original="'.$imgurl.'" title="'.$imgname.'" /><br />';
 }
 
 function proc_input($str){
@@ -94,6 +94,12 @@ function list_file_sp($dir,$pattern="", $convert = false){
 
 </div>
 
-<div id="footer"></div>
+<div id="footer">
+<script>
+$(function() {
+    $("img.lazy").lazyload();
+});
+</script>
+</div>
 </body>
 </html>
