@@ -10,6 +10,7 @@ body {background:rgb(227,227,224);}
 
 #nav {margin-left:100px}
 #nav img {width:36px;height:36px;}
+#nav .cur{background:rgb(114,113,113)}
 
 .dropdown-content {
     display: none;

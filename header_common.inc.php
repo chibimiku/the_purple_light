@@ -25,12 +25,21 @@ $mypic = array(
 	'mail.png'
 );
 
+$deepdark = array(
+	false,
+	false,
+	false,
+);
+
 if(defined('INTRO')){
 	$mypic[1] = 'logo_disabled.png';
+	$deepdark[1] = true;
 }elseif(defined('STAFF')){
 	$mypic[2] = 'mail_disabled.png';
+	$deepdark[2] = true;
 }elseif(defined('INDEX')){
 	$mypic[0] = 'home_disabled.png';
+	$deepdark[0] = true;
 }
 
 ?>
@@ -49,8 +58,8 @@ if(defined('INTRO')){
 <div id="header">
 	<a href="/"><img src="static/image/logo.png" title="返回首页" /></a>
 	<span id="nav">
-		<a href="/index.php" title="首页"><img src="static/image/nav/<?php echo $mypic[0];?>" /></a>
-		<a href="/about.php" title="公司简介"><img src="static/image/nav/<?php echo $mypic[1];?>" /></a>
-		<a href="/staff.php" title="联系我们"><img src="static/image/nav/<?php echo $mypic[2];?>" /></a>
+		<a href="/index.php" title="首页"><img src="static/image/nav/<?php echo $mypic[0];?>" <?php if($deepdark[0]){echo 'class="cur"';}?>/></a>
+		<a href="/about.php" title="公司简介"><img src="static/image/nav/<?php echo $mypic[1];?>" <?php if($deepdark[1]){echo 'class="cur"';}?>/></a>
+		<a href="/staff.php" title="联系我们"><img src="static/image/nav/<?php echo $mypic[2];?>" <?php if($deepdark[2]){echo 'class="cur"';}?>/></a>
 	</span>
 </div>
