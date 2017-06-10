@@ -17,11 +17,11 @@ if(isset($_GET['debug'])){
 $data = array();
 for($i=0;$i<INDEX_ROW_NUM;$i++){
 	$num = $i+1; //从1开始计数
-	$data[$num] = DB::query('SELECT * FROM index_list WHERE row='.$num.' ORDER BY \'order\' ASC');
+	$data[$num] = DB::query('SELECT * FROM index_list WHERE row='.$num.' ORDER BY `order` ASC');
 }
 
 if($debug){
-	//var_dump($data);
+	var_dump($data);
 }
 
 //构造子索引$subdata
@@ -55,7 +55,7 @@ function make_index_arr($arr, $subdata = array()){
 			$addstr = $addstr.'</div></div></td>'; //收尾
 			$ret_td_arr[] = $addstr;
 		}else{
-			$ret_td_arr[] = '<td colspan="'.$row['picsize'].'"><img src="'.$row['picurl'].'" /></td>';
+			$ret_td_arr[] = '<td colspan="'.$row['picsize'].'"><img class="front_image" src="'.$row['picurl'].'" /></td>';
 		}
 	}
 	return $ret_td_arr;

@@ -26,12 +26,12 @@ if(!$dataid){
 	showmessage("错误的dataid");
 }
 
-$info = DB::queryFirstRow('SELECT * FROM index_catalist WHERE dataid=$dataid');
+$info = DB::queryFirstRow('SELECT * FROM index_catalist WHERE dataid='.$dataid);
 if(!$info){
 	showmessage("错误，不正确的id");
 }
 
-$masterinfo = DB::queryFirstRow('SELECT * FROM index_list WHERE id=$dataid[indexid]');
+$masterinfo = DB::queryFirstRow('SELECT * FROM index_list WHERE id='.$info['indexid']);
 
 //load data from dir. 
 $title = $masterinfo['chnname'];
